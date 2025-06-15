@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Verifikasi Dokumen</title></head>
+<body>
+  {% if valid %}
+    <h2>✅ Dokumen Terverifikasi</h2>
+    <p><strong>Nama:</strong> {{ name }}</p>
+    <p><strong>Info:</strong> {{ info }}</p>
+    <p>
+      <a href="/download/{{ doc_id }}">📄 Download PDF Dokumen</a><br>
+      <img src="/static/qrcodes/qr_{{ doc_id }}.png" alt="QR Code">
+    </p>
+  {% else %}
+    <h2>❌ Dokumen Tidak Ditemukan atau Tidak Valid</h2>
+  {% endif %}
+</body>
+</html>
