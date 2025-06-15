@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Install dependencies
+pip install -r requirements.txt
+
+# Jalankan aplikasi (opsional, tergantung platform)
+python main.py
+
+
 # Hentikan jika ada error
 set -e
 
